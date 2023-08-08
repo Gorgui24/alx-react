@@ -11,14 +11,14 @@ function App() {
 	  		<p>Login to access the full dashboard</p>
 	  		<form action="#">
   				<label for="Ename">Email: </label>
-  				<input type="text" id="Email" name="Email">
+  				<input type="text" id="Email" name="Email"/>
  				<label for="Password">Password: </label>
-  				<input type="text" id="Password" name="Password">
- 				<input type="submit" value="OK">
+  				<input type="text" id="Password" name="Password"/>
+ 				<input type="submit" value="OK"/>
 			</form> 
 	  	</body>
 	  	<footer className="App-footer">
-	  		<p>Copyright 2020 - holberton School</p>
+	  		<p>Copyright {getFullYear()} - {getFooterCopy(true)}</p>
 		</footer>
 	</div>
   );
