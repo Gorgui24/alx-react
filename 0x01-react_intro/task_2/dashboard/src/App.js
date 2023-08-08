@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import logo from './logo.jpg'
+import { getFullYear, getFooterCopy } from './utils'
 function App() {
   return (
 	  <div className="App">
