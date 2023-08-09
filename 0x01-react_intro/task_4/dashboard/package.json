@@ -1,5 +1,5 @@
 {
-	"homepage": "https://gorgui24.github.io/alx-react/0x01-react_intro/task_3/dashboard",
+  "homepage": "https://gorgui24.github.io/alx-react/0x01-react_intro/task_4/dashboard",
   "name": "react-tutorial",
   "version": "0.1.0",
   "private": true,
@@ -39,6 +39,7 @@
     ]
   },
   "devDependencies": {
-    "enzyme": "^3.11.0"
+    "enzyme": "^3.11.0",
+    "gh-pages": "^5.0.0"
   }
 }
