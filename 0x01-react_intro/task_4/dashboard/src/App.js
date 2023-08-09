@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import logo from './logo.csv'
+import logo from './logo.svg'
 import { getFullYear, getFooterCopy } from './utils'
 function App() {
   return (
