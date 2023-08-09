@@ -6,7 +6,7 @@ function getFooterCopy(isIndex) {
 	if (!isIndex) return "Holberton School main dashboard";
 	return "Holberton School";
 }
-function getLatestNotification {
+function getLatestNotification () {
 	return {
 		__html: "<strong>Urgent requirement</strong> - complete by EOD"
 	};
