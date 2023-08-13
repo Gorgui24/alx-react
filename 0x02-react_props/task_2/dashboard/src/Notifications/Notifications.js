@@ -1,7 +1,10 @@
-import './Notifications.css'
-import close_icon from './close-icon.png'
-import { getLatestNotification } from './utils'
+import React from 'react'
+import close_icon from '../close-icon.png'
+import { getLatestNotification } from '../utils/utils'
 import NotificationItem from './NotificationItem'
+
+import './Notifications.css'
+
 export default function Notification(props) {
   return (
 	<div className="Notifications">
