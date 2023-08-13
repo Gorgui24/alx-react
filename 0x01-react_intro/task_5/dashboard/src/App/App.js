@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import logo from './logo.svg'
-import { getFullYear, getFooterCopy } from './utils'
+import logo from '../assets/logo.svg'
+import { getFullYear, getFooterCopy } from '../utils/utils'
 function App() {
   return (
 	  <div className="App">
