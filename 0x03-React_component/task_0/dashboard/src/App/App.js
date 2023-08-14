@@ -62,7 +62,7 @@ const listNotifications = [
 	}
 ]
 }
-
+}
 App.defaultProps = {
 	isLoggedIn: false
 }
