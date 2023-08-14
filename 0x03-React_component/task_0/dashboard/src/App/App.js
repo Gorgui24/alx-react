@@ -7,7 +7,7 @@ import Footer from '../Footer/Footer'
 import CourseList from '../CourseList/CourseList'
 import propTypes from 'prop-types'
 
-class App extends PureComponent {
+class App extends Component {
 	render() {
 	const { isLoggedIn } = this.props;
 	return (
@@ -15,7 +15,7 @@ class App extends PureComponent {
 			<Notifications listNotifications={listNotifications} />
 			<Header />
 			<div className="App-body">
-				{isLoggedIn ? <CourseList listCourses={listCourses} /> : <Login />}
+				{this.isLoggedIn ? <CourseList listCourses={listCourses} /> : <Login />}
 			</div>
 			<div className="App-footer">
 				<Footer />
