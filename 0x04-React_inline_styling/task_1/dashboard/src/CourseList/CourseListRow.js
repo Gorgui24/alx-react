@@ -1,5 +1,5 @@
 import React from 'react'
-import './CourseList.css'
+import { StyleSheet, css } from 'aphrodite';
 import propTypes from 'prop-types'
 
 
@@ -16,12 +16,12 @@ const CourseListRow = ({ isHeader, textFirstCell, textSecondCell }) => {
 	if (isHeader) {
 		style = header_row_background_color;
 		if (!textSecondCell) {
-			node = <th colSpan="2">{textFirstCell}</th>;
+			node = <th colSpan="2" className={css(rowStyles.th)>{textFirstCell}</th>;
 		} else {
 			node = 
 		  <React.Fragment>
-			  <th>{textFirstCell}</th>
-			  <th>{textSecondCell}</th>
+			  <th className={css(rowStyles.NOTth)}>{textFirstCell}</th>
+			  <th className={css(rowStyles.NOTth)}>{textSecondCell}</th>
 		  </React.Fragment>;
 		}
 	} else {
@@ -38,6 +38,18 @@ const CourseListRow = ({ isHeader, textFirstCell, textSecondCell }) => {
 		</tr>
 	);
 }
+const rowStyles = StyleSheet.create({
+	th: {
+		textAlign: 'center',
+		border: `1px solid`,
+		paddingBottom: `0.5rem`
+	},
+
+	NOTth: {
+		textAlign: 'start',
+		borderBottom: `1px solid`,
+	}
+})
 
 CourseListRow.defaultProps = {
 	isHeader: false,

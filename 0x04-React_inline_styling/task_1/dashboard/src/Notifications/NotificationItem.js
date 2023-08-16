@@ -4,17 +4,37 @@ import propTypes from 'prop-types'
 
 class NotificationItem extends PureComponent {
 	render() {
-		// props:
-		// - type: string, required, default: 'default'
-		// - value: string
-		// - html: object with key '__html' and value: string
-		if ((this.props.type && this.props.value) && (typeof this.props.type === 'string' && typeof this.props.value === 'string') && (!this.props.html)) return(<li data-notification-type={this.props.type} onClick={this.props.markAsRead}>{this.props.value}</li>)
-		if ((!this.props.type) && (this.props.html) && (this.props.html.__html)) return(<li data-notification-type="default" dangerouslySetInnerHTML={this.props.html} onClick={this.props.markAsRead}></li>)
-		if ((this.props.type) && (this.props.html) && (this.props.html.__html)) return(<li data-notification-type={this.props.type} dangerouslySetInnerHTML={this.props.html} onClick={this.props.markAsRead}></li>)
-		return(<li data-notification-type="default" onClick={this.props.markAsRead}>NotificationItem: invalid props</li>)
+		if (type === 'urgent') {
+		return (
+			<li onCLick={() => { markAsRead(id) }}
+				data-notification-type={type}
+				dangerouslySetInnerHTML={html}
+				className={css(itemStyles.urgent)}
+			>
+				{value}
+			</li>
+		)
+	}
+	return (
+		<li onCLick={() => { markAsRead(id) }}
+			data-notification-type={type}
+			dangerouslySetInnerHTML={html}
+			className={css(itemStyles.default)}
+		>
+			{value}
+		</li>
+	)
 	}
 }
+const itemStyles = StyleSheet.create({
+	urgent: {
+		color: 'red'
+	},
 
+	default: {
+		color: 'blue'
+	}
+})
 
 NotificationItem.propTypes = {
 	type: propTypes.string,

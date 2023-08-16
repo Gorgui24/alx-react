@@ -25,3 +25,4 @@ describe('<NotificationItem />', () => {
 		expect(wrapper.html()).toContain('dangerouslySetInnerHtml');
 	})
 })
+
