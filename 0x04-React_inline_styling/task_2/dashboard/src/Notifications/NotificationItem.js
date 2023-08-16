@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react'
 import propTypes from 'prop-types'
-
+import { StyleSheet, css } from 'aphrodite'
 
 class NotificationItem extends PureComponent {
 	render() {
