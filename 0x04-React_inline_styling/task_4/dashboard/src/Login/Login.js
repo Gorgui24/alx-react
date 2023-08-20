@@ -12,9 +12,9 @@ class App extends Component {
 						<p>Login to access the full dashboard</p>
 	  					<form action="#">
   							<label className={css(loginStyles.label)} for="Ename">Email: </label>
-  							<input className={css(loginStyles.input) type="text" id="Email" name="Email"/>
+  							<input className={css(loginStyles.input)} type="text" id="Email" name="Email"/>
  							<label className={css(loginStyles.label)} for="Password">Password: </label>
-  							<input className={css(loginStyles.input) type="text" id="Password" name="Password"/>
+  							<input className={css(loginStyles.input)} type="text" id="Password" name="Password"/>
  							<input className={css(loginStyles.button)} type="submit" value="OK"/>
 						</form> 
 						</div>

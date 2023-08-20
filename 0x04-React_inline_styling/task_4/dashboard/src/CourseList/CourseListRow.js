@@ -16,7 +16,7 @@ const CourseListRow = ({ isHeader, textFirstCell, textSecondCell }) => {
 	if (isHeader) {
 		style = header_row_background_color;
 		if (!textSecondCell) {
-			node = <th colSpan="2" className={css(rowStyles.th)>{textFirstCell}</th>;
+			node = <th colSpan="2" className={css(rowStyles.th)}>{textFirstCell}</th>;
 		} else {
 			node = 
 		  <React.Fragment>
