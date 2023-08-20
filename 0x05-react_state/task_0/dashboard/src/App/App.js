@@ -51,6 +51,7 @@ class App extends Component {
 	render() {
 		// assign props to local variables
 		const { isLoggedIn } = this.props;
+		const { displayDrawer } = this.state
 
 		const listCourses = [
 			{ id: 1, name: 'ES6', credit: '60' },
